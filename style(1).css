@@ -1,0 +1,57 @@
+/* General reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; /* Space between columns */
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .column {
+    flex: 1 1 calc(33.33% - 16px); /* 3 columns, adjusts with screen size */
+    max-width: calc(33.33% - 16px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .column img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .column p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .column:hover {
+    transform: scale(1.05);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .column {
+      flex: 1 1 calc(50% - 16px); /* 2 columns for tablets */
+      max-width: calc(50% - 16px);
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .column {
+      flex: 1 1 100%; /* Single column for smaller screens */
+      max-width: 100%;
+    }
+  }
+  

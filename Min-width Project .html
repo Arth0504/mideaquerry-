@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Profile</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* General Reset */
+body, h1, h2, p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Header */
+.header {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Main Content */
+.main-content {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about {
+  margin-bottom: 40px;
+}
+
+.about h2 {
+  color: #4caf50;
+  margin-bottom: 10px;
+}
+
+.portfolio {
+  text-align: center;
+}
+
+.portfolio-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.portfolio-item {
+  max-width: 300px;
+  flex: 1 1 calc(33.33% - 40px);
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.portfolio-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.portfolio-item p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .portfolio-item {
+    flex: 1 1 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-content {
+    padding: 15px;
+  }
+
+  .portfolio-grid {
+    gap: 10px;
+  }
+
+  .portfolio-item {
+    padding: 5px;
+  }
+}
+
+</style>
+<body>
+  <header class="header">
+    <h1>Welcome to My Profile</h1>
+  </header>
+  <main class="main-content">
+    <section class="about">
+      <h2>About Me</h2>
+      <p>Hello! I’m a web developer passionate about creating responsive and user-friendly websites. This project demonstrates how to use `max-width` for clean and adaptive designs.</p>
+    </section>
+    <section class="portfolio">
+      <h2>Portfolio</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <img src="51DhQ3Ox2zL.jpg" alt="Project 1">
+          <p>CHIST I5 Extreme Gaming Pc Full Setup (I5 4th Gen Core i5-4750 Gaming Desktop (16GB RAM/512)</p>
+        </div>
+        <div class="portfolio-item">
+          <img src="242947.jpg" alt="Project 2">
+          <p>X-Game Ryzen 5 Gaming PC, 16GB RAM, 1TB SSD, 4GB Graphics, 24" Monitor Bundle</p>
+        </div>
+        <div class="portfolio-item">
+          <img src="66868099d86c6b399206f583-bestier-52-inch-gaming-computer-desk.jpg" alt="Project 3">
+          <p>Bestier Premium Gaming Computer Desk with LED Lights, Shelves - 52 inch</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2024 Personal Profile. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

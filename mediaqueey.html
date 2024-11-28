@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Query Test</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #007acc;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.main-content {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about {
+  margin-bottom: 30px;
+}
+
+.about h2 {
+  color: #007acc;
+}
+
+.portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+.portfolio-item {
+  flex: 1 1 calc(33% - 20px);
+  max-width: calc(33% - 20px);
+  text-align: center;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+}
+
+.portfolio-item p {
+  padding: 10px 0;
+  color: #555;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+  .portfolio-item {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-content {
+    padding: 15px;
+  }
+
+  .portfolio-item {
+    flex: 1 1 calc(100% - 20px);
+    max-width: calc(100% - 20px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    padding: 15px;
+    font-size: 1.2rem;
+  }
+
+  .portfolio-item p {
+    font-size: 0.9rem;
+  }
+
+  .about p {
+    font-size: 1rem;
+  }
+}
+
+</style>
+<body>
+  <header class="header">
+    <h1>My Responsive Profile</h1>
+  </header>
+  <main class="main-content">
+    <section class="about">
+      <h2>About Me</h2>
+      <p>
+        Hello! I'm a student learning web development. This page demonstrates the use of media queries to create a responsive design that works on desktops, tablets, and mobile devices.
+      </p>
+    </section>
+    <section class="portfolio">
+      <h2>Profile</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <img src="wev.jpg" alt="Project 1">
+          <p>Project 1</p>
+        </div>
+        <div class="portfolio-item">
+          <img src="how-to-start-coding-1.webp" alt="Project 2">
+          <p>Project 2</p>
+        </div>
+        <div class="portfolio-item">
+          <img src="001.jpg" alt="Project 3">
+          <p>Project 3</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2024 Responsive Profile. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
